@@ -10,7 +10,6 @@ function loadSVG() {
   var i = 0;
   window.timer = window.setInterval(
     function() {
-      debugger;
       console.log(i * interval);
       circle.setAttribute("stroke-dasharray", angle + ", 20000");
       myTimer.innerHTML = parseInt((angle / circumstance) * 100) + "%";
