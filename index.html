@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<title>Simple SVG Loader</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<div id="app"></div>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 300 300" preserveAspectRatio="none"
+	 style="width:300; height:300; top:0; left:0;">
+		<circle cx="100" cy="100" r="57" id="green-halo" fill="none" stroke="url(#a)" stroke-width="15" stroke-dasharray="0,20000"
+		 transform="rotate(0,100,100)" />
+		<text id="myTimer" text-anchor="middle" x="100" y="110" style="font-size: 36px;">0%</text>
+		<defs>
+			<linearGradient xmlns="http://www.w3.org/2000/svg" x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
+				<stop stop-color="#f1f1f1" stop-opacity="1" offset="0%">
+					<animate attributeName="stop-color" values="#f1f1f1;#f1f1f1;#f1f1f1;" dur="{{element.timer.seconds}}s" repeatCount="indefinite"></animate>
+				</stop>
+				<stop stop-color="#FFC79D" stop-opacity="1" offset="100%">
+					<animate attributeName="stop-color" values="#f1f1f1; #f1f1f1; #f1f1f1;" dur="{{element.timer.seconds}}s" repeatCount="indefinite"></animate>
+				</stop>
+			</linearGradient>
+		</defs>
+	
+	</svg>
+	
+	<script src="src/index.js"></script>
+</body>
+
+</html>
